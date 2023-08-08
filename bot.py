@@ -11,19 +11,13 @@ import re
 import os
 
 
-
-
-
-
 ##################################################################
 
 #email e senha
-email = 'freedom.tecnologia@freedomhonda.com.br'
-senha = 'Freedom.9!'
+email = '' #Coloque a e-mail dentro das aspas
+senha = '' #Coloque a senha dentro das aspas 
         
 ###################################################################
-
-
 
 
 def main():
@@ -243,17 +237,13 @@ def main():
 
     # Reorganizar as colunas do DataFrame
     df1 = df1.reindex(columns=nova_ordem_colunas)
-    
-######################################################################################################################################
-    
-    
-    
+      
     
     # conexão com o banco de dados.
-    cx_Oracle.init_oracle_client(lib_dir=r"C:\oracle\instantclient_21_3")
-    dsn = cx_Oracle.makedsn(host='10.1.1.25', port=1521, service_name='XEPDB1')
-    username = 'DMUSER'
-    password = 'DMUSER'
+    cx_Oracle.init_oracle_client(lib_dir=r" ") #Coloque o caminho do banco dentro das aspas
+    dsn = cx_Oracle.makedsn(host=' ', port= ' ' , service_name=' ') #Coloque o host, a porta e o service name dentro das aspas
+    username = ' ' #Coloque o username dentro das aspas
+    password = ' ' #Coloque o password dentro das aspas
     
     # Convertendo o DataFrame para uma lista de dicionários
     dados = df1.to_dict('records')
@@ -279,17 +269,6 @@ def main():
 
     # Exibindo o DataFrame resultante
     print(df1)
-
-
-    # Defina o nome do arquivo CSV usando a variável numero_lote
-    nome_arquivo_csv = f"{numero_lote}.csv"
-
-    # Defina o caminho completo do arquivo CSV
-    caminho_arquivo_csv = fr"C:\Users\douglas.saraiva\Desktop\codigos\robo_duleads\{nome_arquivo_csv}"
-
-    # Extrair o DataFrame para o arquivo CSV
-    df1.to_csv(caminho_arquivo_csv, index=False)
-
 
  
     # Wait 3 seconds before closing
