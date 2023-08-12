@@ -1,7 +1,3 @@
-Aqui está um exemplo de arquivo README para o seu código no GitHub:
-
----
-
 # Web Scraping Duleads Bot
 
 Este é um bot de web scraping escrito em Python usando a biblioteca BotCity para automatizar a coleta de dados do [DealerUp Duleads](https://app.dealerup.com.br/leads/analysis). Ele acessa o painel de análise de leads e extrai informações relevantes para análise posterior. O bot é projetado para funcionar com o navegador Chrome.
